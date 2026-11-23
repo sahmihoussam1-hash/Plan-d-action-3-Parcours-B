@@ -1,0 +1,30 @@
+let articles = [
+  { id: 1, titre: "Bague solitaire or 18K", categorie: "bague", prix: 4200, stock: 3, date: "2026-09-12" },
+  { id: 2, titre: "Collier perles", categorie: "collier", prix: 1850, stock: 0, date: "2026-10-03" },
+  { id: 3, titre: "Bracelet argent", categorie: "bracelet", prix: 650, stock: 12, date: "2026-08-21" },
+  { id: 4, titre: "Bague alliance", categorie: "bague", prix: 2900, stock: 5, date: "2026-11-01" },
+  { id: 5, titre: "Boucles d'oreilles émeraude", categorie: "boucles", prix: 5600, stock: 1, date: "2026-07-15" },
+  { id: 6, titre: "Collier or jaune", categorie: "collier", prix: 7300, stock: 2, date: "2026-10-28" },
+  { id: 7, titre: "Bracelet jonc or", categorie: "bracelet", prix: 3400, stock: 0, date: "2026-09-30" },
+  { id: 8, titre: "Bague saphir", categorie: "bague", prix: 6100, stock: 0, date: "2026-11-10" },
+  { id: 9, titre: "Collier main de Fatma", categorie: "collier", prix: 980, stock: 7, date: "2026-08-05" },
+  { id: 10, titre: "Créoles argent", categorie: "boucles", prix: 720, stock: 9, date: "2026-10-18" }
+];
+
+// recherche de bagues avec filter 
+const bagues = articles.filter(a => a.categorie === "bqgue");
+console.log(bagues);
+// titre en rupture 
+const ruptures = articles
+ .filter(a => a.stock === 0)
+ .map(a => a.titre);
+console.log(ruptures);
+// article dont l'id vaut 7 (find)
+const articleSept = articles.find(a => a.id === 7);
+console.log(articleSept);
+// trouver l article qui a plus de 5000dh(some)
+const auMoinsUn = articles.some(a => a.prix > 5000);
+console.log(auMoinsUn);
+// tous les articles sont-ils en stock ?(every)
+const tousEnStock = articles.every(a => a.stock > 0);
+console.log(tousEnStock);
