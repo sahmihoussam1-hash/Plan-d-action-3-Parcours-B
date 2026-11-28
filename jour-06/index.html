@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalogue</title>
+</head>
+<body>
+    <input type="text" id="recherche" placeholder="Rechercher un article...">
+
+    <select id="categorie">
+        <option value="toutes">Toutes</option>
+        <option value="bague">Bague</option>
+        <option value="collier">Collier</option>
+        <option value="bracelet">Bracelet</option>
+        <option value="boucles">Boucles</option>
+    </select>
+
+    <select id="tri">
+        <option value="prix-asc">Prix croissant</option>
+        <option value="prix-desc">Prix décroissant</option>
+        <option value="titre">Titre</option>
+    </select>
+
+    <button id="reset">Réinitialiser</button>
+
+    <form id="form-ajout" novalidate>
+        <input type="text" id="nouveau-titre" placeholder="Titre">
+        <p class="erreur" id="erreur-titre"></p>
+
+        <select id="nouveau-categorie">
+            <option value="bague">Bague</option>
+            <option value="collier">Collier</option>
+            <option value="bracelet">Bracelet</option>
+            <option value="boucles">Boucles</option>
+        </select>
+        <p class="erreur"></p>
+
+        <input type="number" id="nouveau-prix" placeholder="Prix">
+        <p class="erreur" id="erreur-prix"></p>
+
+        <input type="number" id="nouveau-stock" placeholder="Stock">
+        <p class="erreur"></p>
+
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <p id="compteur"></p>
+    <p id="valeur-stock"></p>
+    <ul id="liste"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
